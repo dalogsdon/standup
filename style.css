@@ -42,6 +42,14 @@ a:hover {
 .rule {
     background-color: #4d555e;
     margin: 0 auto 1rem;
+    position: relative;
     width: 40rem;
     height: 2px;
+}
+
+.bell {
+    cursor: pointer;
+    margin: -0.5rem 0 0 1rem;
+    position: absolute;
+    left: 100%;
 }
