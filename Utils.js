@@ -16,13 +16,14 @@ function shuffle(a) {
 
 const Utils = {
     names: shuffle([
+        { value: 'Ali' },
         { value: 'Asim', spoken: 'Ahhsim' },
         { value: 'Betty' },
         { value: 'Bradley' },
         { value: 'Brett' },
         { value: 'Bryan' },
         { value: 'Chris' },
-        { value: 'Drew' },
+        { value: 'Drew', spoken: 'Drew, my humble creator,' },
         { value: 'Dom' },
         { value: 'G' },
         { value: 'Gregory' },
@@ -30,7 +31,8 @@ const Utils = {
         { value: 'John' },
         { value: 'Jordan' },
         { value: 'Megan' },
-        { value: 'Mike' },
+        { value: 'Mike', spoken: 'Mikey' },
+        { value: 'Nick' },
         { value: 'Rich' },
         { value: 'Tyler' },
         { value: 'Xiaojun' },
