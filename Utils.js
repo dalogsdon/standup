@@ -20,7 +20,6 @@ const Utils = {
         { value: 'Asim', spoken: 'Ahhsim' },
         { value: 'Betty' },
         { value: 'Bradley' },
-        { value: 'Brett' },
         { value: 'Bryan' },
         { value: 'Chris' },
         { value: 'Drew', spoken: 'Drew, my humble creator,' },
