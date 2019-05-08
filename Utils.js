@@ -29,6 +29,7 @@ const Utils = {
         { value: 'Jesse', spoken: 'Lorenzo' },
         { value: 'John' },
         { value: 'Jordan' },
+        { value: 'Karan' },
         { value: 'Kelsey' },
         { value: 'Luis' },
         { value: 'Megan' },
