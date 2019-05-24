@@ -27,19 +27,27 @@ const style = (
 );
 
 export default class Name extends React.Component {
-    winner = Utils.getRandomName();
+    state = {
+        winner: Utils.getRandomName()
+    };
+
     componentDidMount() {
         Utils.loadVoices();
-        this.winner = Utils.getRandomName();
-        window.addEventListener('keypress', (evt) => {
-            Utils.say((this.winner.spoken || this.winner.value) + ' is the winner.');
-        });
+        window.addEventListener('keypress', this.onKeypress);
     }
+    componentWillUnmount() {
+        window.removeEventListener('keypress', this.onKeypress);
+    }
+    onKeypress = () => {
+        const { spoken, value } = this.state.winner;
+        Utils.say((spoken || value) + ' is the winner.');
+    };
     render() {
+        const { winner } = this.state;
         return (
             <div className="name">
                 <span>Sorry, that doesn't work right now.</span>
-                <span>Let's just say <span className="winner">{this.winner.value}</span> is the winner.</span>
+                <span>Let's just say <span className="winner">{winner.value}</span> is the winner.</span>
                 {style}
             </div>
         );
