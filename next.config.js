@@ -3,7 +3,10 @@ module.exports = {
     exportPathMap: function () {
         return {
             '/': { page: '/' },
-            '/about': { page: '/about' },
+            '/cards': { page: '/name' },
+            '/wheel': { page: '/name' },
+            '/plinko': { page: '/name' },
+            '/name': { page: '/name' },
         }
     }
 };
