@@ -27,9 +27,10 @@ const style = (
 );
 
 export default class Name extends React.Component {
-    winner = Utils.names[0];
+    winner = Utils.getRandomName();
     componentDidMount() {
         Utils.loadVoices();
+        this.winner = Utils.getRandomName();
         window.addEventListener('keypress', (evt) => {
             Utils.say((this.winner.spoken || this.winner.value) + ' is the winner.');
         });

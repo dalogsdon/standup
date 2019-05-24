@@ -38,6 +38,10 @@ const Utils = {
         { value: 'Xiaojun' },
         { value: 'Ytalo' }
     ]),
+    getRandomName() {
+        const i = Math.floor(Math.random() * this.names.length);
+        return this.names[i];
+    },
     loadVoices() {
         window.speechSynthesis.getVoices();
     },
