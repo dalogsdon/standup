@@ -2220,7 +2220,16 @@ function (_React$Component) {
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Name)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "winner", _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].getRandomName());
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+      winner: _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].getRandomName()
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "onKeypress", function () {
+      var _this$state$winner = _this.state.winner,
+          spoken = _this$state$winner.spoken,
+          value = _this$state$winner.value;
+      _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].say((spoken || value) + ' is the winner.');
+    });
 
     return _this;
   }
@@ -2228,44 +2237,45 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Name, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
-
       _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].loadVoices();
-      this.winner = _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].getRandomName();
-      window.addEventListener('keypress', function (evt) {
-        _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].say((_this2.winner.spoken || _this2.winner.value) + ' is the winner.');
-      });
+      window.addEventListener('keypress', this.onKeypress);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener('keypress', this.onKeypress);
     }
   }, {
     key: "render",
     value: function render() {
+      var winner = this.state.winner;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "name",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 49
         },
         __self: this
       }, "Sorry, that doesn't work right now."), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 50
         },
         __self: this
       }, "Let's just say ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "winner",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 50
         },
         __self: this
-      }, this.winner.value), " is the winner."), style);
+      }, winner.value), " is the winner."), style);
     }
   }]);
 
@@ -2376,7 +2386,7 @@ var Utils = {
 
 /***/ }),
 
-/***/ 0:
+/***/ 2:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fname&absolutePagePath=%2FUsers%2Fdlogsdon%2FGitHub%2Fstandup%2Fpages%2Fname.js ***!
   \*****************************************************************************************************************************/
@@ -2399,5 +2409,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=name.js.map
