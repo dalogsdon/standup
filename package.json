@@ -9,7 +9,7 @@
     "export": "next export",
     "start": "next start",
     "predeploy": "npm run build && npm run export",
-    "deploy": "touch out/.nojekyll && gh-pages -d out"
+    "deploy": "touch out/.nojekyll && gh-pages -t -d out"
   },
   "keywords": [],
   "author": "",
