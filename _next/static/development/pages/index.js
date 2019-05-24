@@ -10074,6 +10074,10 @@ var Utils = {
   }, {
     value: 'Ytalo'
   }]),
+  getRandomName: function getRandomName() {
+    var i = Math.floor(Math.random() * this.names.length);
+    return this.names[i];
+  },
   loadVoices: function loadVoices() {
     window.speechSynthesis.getVoices();
   },
@@ -10091,7 +10095,7 @@ var Utils = {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!**************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fdlogsdon%2FGitHub%2Fstandup%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************/
@@ -10114,5 +10118,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
