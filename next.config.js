@@ -1,5 +1,7 @@
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/standup' : '',
+    assetPrefix: isProduction ? '/standup' : '',
     exportPathMap: function () {
         return {
             '/': { page: '/' },
@@ -8,5 +10,8 @@ module.exports = {
             '/plinko': { page: '/name' },
             '/name': { page: '/name' },
         }
+    },
+    publicRuntimeConfig: {
+        linkPrefix: isProduction ? '/standup' : ''
     }
 };

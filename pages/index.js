@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '../components/PrefixedLink';
 import Utils from '../util/Utils';
 
 const style = (
