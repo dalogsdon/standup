@@ -1,5 +1,62 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/PrefixedLink.js":
+/*!************************************!*\
+  !*** ./components/PrefixedLink.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_server_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next-server/config */ "./node_modules/next-server/config.js");
+/* harmony import */ var next_server_config__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_server_config__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/dlogsdon/GitHub/standup/components/PrefixedLink.js";
+
+// source: https://github.com/zeit/next.js/issues/3335#issuecomment-489354854
+
+/**
+ * Higher order component, which is based on 'next/link'
+ * When app is deployed on github pages repository which is not the main one
+ * e.g https://username.github.io/repository/
+ * standard 'next/link' is not wokring properly, it doesn't add the 'reporsitory'
+ * to url so instead of expected 'https://username.github.io/repository/about',
+ * it would be 'https://username.github.io/about/
+ * This HOC solves the problem, by adding the prefix (which is defined in next.config.js)
+ * to 'as' property
+ */
+
+
+
+var _getConfig = next_server_config__WEBPACK_IMPORTED_MODULE_1___default()(),
+    publicRuntimeConfig = _getConfig.publicRuntimeConfig;
+
+var linkPrefix = publicRuntimeConfig.linkPrefix;
+
+var PrefixedLink = function PrefixedLink(_ref) {
+  var href = _ref.href,
+      _ref$as = _ref.as,
+      as = _ref$as === void 0 ? href : _ref$as,
+      children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: href,
+    as: "".concat(linkPrefix).concat(as),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, children);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (PrefixedLink);
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
@@ -4556,6 +4613,18 @@ module.exports = bind.call(Function.call, Object.prototype.hasOwnProperty);
 
 /***/ }),
 
+/***/ "./node_modules/next-server/config.js":
+/*!********************************************!*\
+  !*** ./node_modules/next-server/config.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/lib/runtime-config */ "./node_modules/next-server/dist/lib/runtime-config.js")
+
+
+/***/ }),
+
 /***/ "./node_modules/next-server/dist/lib/mitt.js":
 /*!***************************************************!*\
   !*** ./node_modules/next-server/dist/lib/mitt.js ***!
@@ -5389,6 +5458,33 @@ function () {
 
 Router.events = mitt_1.default();
 exports.default = Router;
+
+/***/ }),
+
+/***/ "./node_modules/next-server/dist/lib/runtime-config.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/next-server/dist/lib/runtime-config.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var runtimeConfig;
+
+exports.default = function () {
+  return runtimeConfig;
+};
+
+function setConfig(configValue) {
+  runtimeConfig = configValue;
+}
+
+exports.setConfig = setConfig;
 
 /***/ }),
 
@@ -9829,8 +9925,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/PrefixedLink */ "./components/PrefixedLink.js");
 /* harmony import */ var _util_Utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../util/Utils */ "./util/Utils.js");
 
 
@@ -9945,7 +10040,7 @@ function (_React$Component) {
           lineNumber: 92
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
         href: "/name",
         __source: {
           fileName: _jsxFileName,
@@ -9958,7 +10053,7 @@ function (_React$Component) {
           lineNumber: 93
         },
         __self: this
-      }, "Pick a Card!")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      }, "Pick a Card!")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
         href: "/name",
         __source: {
           fileName: _jsxFileName,
@@ -9971,7 +10066,7 @@ function (_React$Component) {
           lineNumber: 94
         },
         __self: this
-      }, "Spin the Wheel!")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      }, "Spin the Wheel!")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
         href: "/name",
         __source: {
           fileName: _jsxFileName,
