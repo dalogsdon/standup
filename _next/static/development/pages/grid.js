@@ -10212,8 +10212,6 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "colCount", Math.ceil(Math.sqrt(_this.state.names.length)));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "rowCount", Math.ceil(_this.state.names.length / _this.colCount));
-
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "declareWinner", function () {
       var winner = _this.state.names[_this.state.highlight];
       _util_Utils__WEBPACK_IMPORTED_MODULE_9__["default"].say((winner.spoken || winner.value) + ' is the winner!');
@@ -10258,10 +10256,6 @@ function (_React$Component) {
       this.pickName(50);
     }
   }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {//window.clearInterval(this.interval);
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this$state = this.state,
@@ -10285,14 +10279,14 @@ function (_React$Component) {
         className: classname,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 64
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "page_content",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 65
         },
         __self: this
       }, names.map(function (n, i) {
@@ -10302,7 +10296,7 @@ function (_React$Component) {
           style: style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71
+            lineNumber: 67
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -10311,7 +10305,7 @@ function (_React$Component) {
           "data-winner": i === highlight && !!winner,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 68
           },
           __self: this
         }, n.value));
@@ -10319,7 +10313,7 @@ function (_React$Component) {
         className: "stop-btn-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 71
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -10327,7 +10321,7 @@ function (_React$Component) {
         onClick: this.stop,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 72
         },
         __self: this
       }, stopText))));
@@ -10461,7 +10455,7 @@ var Utils = {
 
 /***/ }),
 
-/***/ 7:
+/***/ 0:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fgrid&absolutePagePath=%2FUsers%2Fdlogsdon%2FGitHub%2Fstandup%2Fpages%2Fgrid.js ***!
   \*****************************************************************************************************************************/
@@ -10484,5 +10478,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=grid.js.map

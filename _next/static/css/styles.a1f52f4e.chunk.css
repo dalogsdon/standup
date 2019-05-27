@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Bungee&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Bungee&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Bungee&display=swap);
+html {
+  font-size: 16px; }
+
+body {
+  background-color: #2f2b2b;
+  color: white;
+  font-family: "Bungee", cursive;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+a:hover {
+  color: #65bafb; }
+
+.grid .page_content {
+  position: absolute;
+  top: 128px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 800px) {
+    .grid .page_content {
+      font-size: 1.25rem; } }
+  @media only screen and (max-width: 425px) {
+    .grid .page_content {
+      font-size: 1rem; } }
+  .grid .page_content .name-wrapper {
+    position: relative; }
+    @media only screen and (max-width: 800px) {
+      .grid .page_content .name-wrapper {
+        min-width: 33.3%; } }
+    @media only screen and (max-width: 300px) {
+      .grid .page_content .name-wrapper {
+        min-width: 50%; } }
+    .grid .page_content .name-wrapper .name {
+      background-color: #4e4848;
+      color: #c5bebe;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      border-radius: 0.5rem; }
+      .grid .page_content .name-wrapper .name[data-highlight="true"] {
+        background-color: #6f6868;
+        color: white; }
+      .grid .page_content .name-wrapper .name[data-winner="true"] {
+        box-shadow: 0 0 50px 10px #6efb65 inset;
+        text-shadow: 1px 1px 0 #6efb65;
+        color: #6efb65;
+        font-size: 1.4em;
+        text-shadow: 1px 1px 0 #5dd656,  2px 2px 0 #56c54f,  3px 3px 0 #469e3f,  4px 4px 0 #41923c;
+        transition: all 1s ease; }
+  .grid .page_content .stop-btn-wrapper {
+    width: 100%;
+    position: relative; }
+    .grid .page_content .stop-btn-wrapper .stop-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      bottom: 0.5rem;
+      right: 0.5rem;
+      background-color: #fb6565;
+      color: white;
+      cursor: pointer;
+      border-radius: 0.5rem; }
+
+.grid.stopping .stop-btn-wrapper .stop-btn {
+  background-color: #4e4848;
+  color: #c5bebe; }
+
+html {
+  font-size: 16px; }
+
+body {
+  background-color: #2f2b2b;
+  color: white;
+  font-family: "Bungee", cursive;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+a:hover {
+  color: #65bafb; }
+
+html {
+  font-size: 16px; }
+
+body {
+  background-color: #2f2b2b;
+  color: white;
+  font-family: "Bungee", cursive;
+  height: 100vh;
+  padding: 0;
+  margin: 0; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+a:hover {
+  color: #65bafb; }
+
+.name .page_content {
+  position: absolute;
+  top: 128px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; }
+  .name .page_content .winner {
+    color: #95fb65; }
+
