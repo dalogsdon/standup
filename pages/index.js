@@ -1,6 +1,6 @@
 import PageLayout from '../components/PageLayout';
 
-import './index.scss';
+import '../styles/index.scss';
 
 class Home extends React.Component {
     componentDidMount() {

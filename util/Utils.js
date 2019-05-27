@@ -11,7 +11,7 @@ function shuffle(a) {
     return a;
 }
 
-const engineers = [
+const engineers = shuffle([
     { value: 'Asim', spoken: 'Ahhsim' },
     { value: 'Bradley', spoken: 'Bradley, the paywall master' },
     { value: 'Bryan' },
@@ -29,31 +29,35 @@ const engineers = [
     { value: 'Tyler' },
     { value: 'Xiaojun' },
     { value: 'Ytalo' },
-];
+]);
 
-const support = [
+const support = shuffle([
     { value: 'Ali' },
     { value: 'Betty' },
     { value: 'Jordan' },
+    { value: 'Joshua' },
     { value: 'Karan' },
     { value: 'Kelsey' },
     { value: 'Mike', spoken: 'Mikey' },
     { value: 'Mohan' },
     { value: 'Nick' },
-];
+]);
 
-function formatDays(group, days) {
-    return group.map(g => Object.assign(g, { days }));
+function uniqueName(name, index, self) {
+    return self.map(n => n.value).indexOf(name.value) === index;
 }
+const allNames = engineers.concat(support).filter(uniqueName);
 
 const Utils = {
-    names: shuffle([
-        ...formatDays(engineers, '135'),
-        ...formatDays(support, '12345'),
-    ]),
+    getNames() {
+        const dayOfWeek = new Date().getDay();
+        return dayOfWeek === 2 || dayOfWeek === 4 ? support : allNames;
+    },
     getRandomName() {
-        const i = Math.floor(Math.random() * this.names.length);
-        return this.names[i];
+        const dayOfWeek = new Date().getDay();
+        const names = dayOfWeek === 2 || dayOfWeek === 4 ? support : allNames;
+        const i = Math.floor(Math.random() * names.length);
+        return names[i];
     },
     loadVoices() {
         window.speechSynthesis.getVoices();

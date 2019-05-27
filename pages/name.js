@@ -1,7 +1,7 @@
 import PageLayout from '../components/PageLayout';
 import Utils from '../util/Utils';
 
-import './name.scss';
+import '../styles/name.scss';
 
 export default class Name extends React.Component {
     state = {

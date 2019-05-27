@@ -11,6 +11,7 @@ module.exports = withSass({
             '/wheel': { page: '/name' },
             '/plinko': { page: '/name' },
             '/name': { page: '/name' },
+            '/grid': { page: '/grid' },
         }
     },
     publicRuntimeConfig: {
