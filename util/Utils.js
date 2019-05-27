@@ -11,32 +11,45 @@ function shuffle(a) {
     return a;
 }
 
+const engineers = [
+    { value: 'Asim', spoken: 'Ahhsim' },
+    { value: 'Bradley', spoken: 'Bradley, the paywall master' },
+    { value: 'Bryan' },
+    { value: 'Chris' },
+    { value: 'Drew', spoken: 'Drew, my humble creator,' },
+    { value: 'Dom' },
+    { value: 'Gaurav', spoken: 'G' },
+    { value: 'Gregory' },
+    { value: 'Jesse', spoken: 'Lorenzo' },
+    { value: 'John' },
+    { value: 'Luis' },
+    { value: 'Megan' },
+    { value: 'Nick' },
+    { value: 'Rich' },
+    { value: 'Tyler' },
+    { value: 'Xiaojun' },
+    { value: 'Ytalo' },
+];
+
+const support = [
+    { value: 'Ali' },
+    { value: 'Betty' },
+    { value: 'Jordan' },
+    { value: 'Karan' },
+    { value: 'Kelsey' },
+    { value: 'Mike', spoken: 'Mikey' },
+    { value: 'Mohan' },
+    { value: 'Nick' },
+];
+
+function formatDays(group, days) {
+    return group.map(g => Object.assign(g, { days }));
+}
+
 const Utils = {
     names: shuffle([
-        { value: 'Ali' },
-        { value: 'Asim', spoken: 'Ahhsim' },
-        { value: 'Betty' },
-        { value: 'Bradley', spoken: 'Bradley, the paywall master' },
-        { value: 'Bryan' },
-        { value: 'Chris' },
-        { value: 'Drew', spoken: 'Drew, my humble creator,' },
-        { value: 'Dom' },
-        { value: 'Gaurav', spoken: 'G' },
-        { value: 'Gregory' },
-        { value: 'Jesse', spoken: 'Lorenzo' },
-        { value: 'John' },
-        { value: 'Jordan' },
-        //{ value: 'Karan' },
-        { value: 'Kelsey' },
-        { value: 'Luis' },
-        { value: 'Megan' },
-        { value: 'Mike', spoken: 'Mikey' },
-        { value: 'Mohan' },
-        { value: 'Nick' },
-        { value: 'Rich' },
-        { value: 'Tyler' },
-        { value: 'Xiaojun' },
-        { value: 'Ytalo' }
+        ...formatDays(engineers, '135'),
+        ...formatDays(support, '12345'),
     ]),
     getRandomName() {
         const i = Math.floor(Math.random() * this.names.length);

@@ -1,13 +1,14 @@
-@import './global';
+@import "./global";
 
-.name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 24px;
-}
-.winner {
-  color: #95fb65;
+.page_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding-top: 3rem;
+
+    .winner {
+        color: #95fb65;
+    }
 }
