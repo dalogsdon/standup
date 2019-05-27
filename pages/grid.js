@@ -20,13 +20,9 @@ class Grid extends React.Component {
         winner: null,
     };
     colCount = Math.ceil(Math.sqrt(this.state.names.length));
-    rowCount = Math.ceil(this.state.names.length / this.colCount);
     componentDidMount() {
         Utils.loadVoices();
         this.pickName(50);
-    }
-    componentWillUnmount() {
-        //window.clearInterval(this.interval);
     }
     declareWinner = () => {
         const winner = this.state.names[this.state.highlight];

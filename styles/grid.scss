@@ -11,10 +11,24 @@
 
         display: flex;
         flex-wrap: wrap;
-        font-size: 24px;
+        font-size: 1.5rem;
+
+        @media only screen and (max-width: 800px) {
+            font-size: 1.25rem;
+        }
+        @media only screen and (max-width: 425px) {
+            font-size: 1rem;
+        }
 
         .name-wrapper {
             position: relative;
+
+            @media only screen and (max-width: 800px) {
+                min-width: 33.3%;
+            }
+            @media only screen and (max-width: 300px) {
+                min-width: 50%;
+            }
 
             .name {
                 background-color: $bg1;
