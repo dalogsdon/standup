@@ -1,71 +1,7 @@
 import Link from '../components/PrefixedLink';
 import Utils from '../util/Utils';
 
-const style = (
-    <style jsx>{`
-        @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
-
-        body {
-            background-color: #2f2b2b;
-            color: white;
-            font-family: 'Bungee', cursive;
-            height: 100vh;
-            padding: 0;
-            margin: 0;
-        }
-        a {
-            color: white;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #65bafb;
-        }
-        p {
-            position: relative;
-        }
-        .standup-home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            position: relative;
-        }
-        .side {
-            display: flex;
-            flex-direction: column;
-            white-space: nowrap;
-        }
-        .left-side {
-            text-align: right;
-            position: absolute;
-            right: 100%;
-            top: 28%;
-            font-size: 24px;
-        }
-        .right-side {
-            text-align: left;
-            position: absolute;
-            left: 100%;
-            top: 24%;
-            font-size: 24px;
-        }
-        .title {
-            font-size: 70px;
-            text-align: center;
-            padding: 0 1em;
-            display: flex;
-            flex-direction: column;
-        }
-        .bell {
-            cursor: pointer;
-            text-shadow: 0 0 0 white;
-            color: transparent;
-        }
-        .bell:hover {
-            text-shadow: 0 0 0 #ffc107;
-        }
-    `}</style>
-);
+import './index.scss';
 
 class Home extends React.Component {
     componentDidMount() {
@@ -95,8 +31,6 @@ class Home extends React.Component {
                         <Link href="/name"><a>Plinko!</a></Link>
                     </span>
                 </p>
-
-                {style}
             </div>
         );
     }

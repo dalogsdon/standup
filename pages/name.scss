@@ -1,0 +1,13 @@
+@import './global';
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+}
+.winner {
+  color: #95fb65;
+}

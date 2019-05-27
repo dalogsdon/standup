@@ -1,6 +1,8 @@
+const withSass = require('@zeit/next-sass');
+
 const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = {
+module.exports = withSass({
     assetPrefix: isProduction ? '/standup' : '',
     exportPathMap: function () {
         return {
@@ -14,4 +16,4 @@ module.exports = {
     publicRuntimeConfig: {
         linkPrefix: isProduction ? '/standup' : ''
     }
-};
+});
