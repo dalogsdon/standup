@@ -41,7 +41,7 @@ var Meta = function Meta() {
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
     rel: "shortcut icon",
-    href: "/static/favicon.png",
+    href: "../static/favicon.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -181,7 +181,7 @@ function (_React$Component) {
           lineNumber: 23
         },
         __self: this
-      }, "Pick a Card")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }, "Card")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
         href: "/name",
         __source: {
           fileName: _jsxFileName,
@@ -194,7 +194,7 @@ function (_React$Component) {
           lineNumber: 24
         },
         __self: this
-      }, "Spin the Wheel")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      }, "Spin")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_PrefixedLink__WEBPACK_IMPORTED_MODULE_6__["default"], {
         href: "/name",
         __source: {
           fileName: _jsxFileName,
