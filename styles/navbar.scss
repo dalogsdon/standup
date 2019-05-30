@@ -65,5 +65,9 @@
     a {
         color: $link-color;
         text-shadow: 1px 1px 0 $text-shadow-color;
+
+        &:hover {
+            color: #65bafb;
+        }
     }
 }
