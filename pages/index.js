@@ -1,5 +1,3 @@
-import PageLayout from '../components/PageLayout';
-
 import '../styles/index.scss';
 
 class Home extends React.Component {
@@ -8,9 +6,9 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <PageLayout className="standup-home">
+            <div className="standup-home">
                 Home page
-            </PageLayout>
+            </div>
         );
     }
 }

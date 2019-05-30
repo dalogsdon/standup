@@ -21,7 +21,7 @@ const engineers = shuffle([
     { value: 'Gaurav', spoken: 'G' },
     { value: 'Gregory' },
     { value: 'Jesse', spoken: 'Lorenzo' },
-    { value: 'John' },
+    { value: 'Jingjing' },
     { value: 'Luis' },
     { value: 'Megan' },
     { value: 'Nick' },

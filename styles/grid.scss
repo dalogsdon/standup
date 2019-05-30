@@ -2,90 +2,84 @@
 @import "./variables";
 
 .grid {
-    .page_content {
-        position: absolute;
-        top: $navbar-height;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    position: absolute;
+    top: $navbar-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: 800px) {
+        font-size: 1.25rem;
+    }
+    @media only screen and (max-width: 425px) {
+        font-size: 1rem;
+    }
+
+    .name-wrapper {
+        position: relative;
 
         @media only screen and (max-width: 800px) {
-            font-size: 1.25rem;
+            min-width: 33.3%;
         }
-        @media only screen and (max-width: 425px) {
-            font-size: 1rem;
-        }
-
-        .name-wrapper {
-            position: relative;
-
-            @media only screen and (max-width: 800px) {
-                min-width: 33.3%;
-            }
-            @media only screen and (max-width: 300px) {
-                min-width: 50%;
-            }
-
-            .name {
-                background-color: $bg1;
-                color: $link-color;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                position: absolute;
-                top: 0.5rem;
-                left: 0.5rem;
-                bottom: 0.5rem;
-                right: 0.5rem;
-
-                border-radius: 0.5rem;
-
-                &[data-highlight="true"] {
-                    background-color: $bg2;
-                    color: white;
-                }
-
-                &[data-winner="true"] {
-                    box-shadow: 0 0 50px 10px #6efb65 inset;
-                    text-shadow: 1px 1px 0 #6efb65;
-                    color: #6efb65;
-                    font-size: 1.4em;
-                    text-shadow: 
-                        1px 1px 0 #5dd656, 
-                        2px 2px 0 #56c54f, 
-                        3px 3px 0 #469e3f, 
-                        4px 4px 0 #41923c;
-                    transition: all 1s ease;
-                }
-            }
+        @media only screen and (max-width: 300px) {
+            min-width: 50%;
         }
 
-        .stop-btn-wrapper {
-            width: 100%;
-            position: relative;
+        .name {
+            background-color: $bg1;
+            color: $link-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            .stop-btn {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            bottom: 0.5rem;
+            right: 0.5rem;
 
-                position: absolute;
-                top: 0.5rem;
-                left: 0.5rem;
-                bottom: 0.5rem;
-                right: 0.5rem;
+            border-radius: 0.5rem;
 
-                background-color: $stop-color;
+            &[data-highlight="true"] {
+                background-color: $bg2;
                 color: white;
-
-                cursor: pointer;
-                border-radius: 0.5rem;
             }
+
+            &[data-winner="true"] {
+                box-shadow: 0 0 50px 10px #6efb65 inset;
+                text-shadow: 1px 1px 0 #6efb65;
+                color: #6efb65;
+                font-size: 1.4em;
+                text-shadow: 1px 1px 0 #5dd656, 2px 2px 0 #56c54f, 3px 3px 0 #469e3f, 4px 4px 0 #41923c;
+                transition: all 1s ease;
+            }
+        }
+    }
+
+    .stop-btn-wrapper {
+        width: 100%;
+        position: relative;
+
+        .stop-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            bottom: 0.5rem;
+            right: 0.5rem;
+
+            background-color: $stop-color;
+            color: white;
+
+            cursor: pointer;
+            border-radius: 0.5rem;
         }
     }
 

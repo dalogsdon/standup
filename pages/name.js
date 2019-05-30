@@ -1,4 +1,3 @@
-import PageLayout from '../components/PageLayout';
 import Utils from '../util/Utils';
 
 import '../styles/name.scss';
@@ -22,12 +21,10 @@ export default class Name extends React.Component {
     render() {
         const { winner } = this.state;
         return (
-            <PageLayout className="name">
-                <div className="page_content">
-                    <span>Sorry, that doesn't work right now.</span>
-                    <span>Let's just say <span className="winner">{winner.value}</span> is the winner.</span>
-                </div>
-            </PageLayout>
+            <div className="page-name">
+                <span>Sorry, that doesn't work right now.</span>
+                <span>Let's just say <span className="winner">{winner.value}</span> is the winner.</span>
+            </div>
         );
     }
 }

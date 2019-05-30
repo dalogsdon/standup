@@ -1,22 +1,15 @@
 @import "./global";
-@import './variables';
+@import "./variables";
 
-.name {
-    .page_content {
-        position: absolute;
-        top: $navbar-height;
-        left: 0;
-        right: 0;
-        bottom: 0;
+.page-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-top: 3rem;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-
-        .winner {
-            color: #95fb65;
-        }
+    .winner {
+        color: #95fb65;
     }
 }

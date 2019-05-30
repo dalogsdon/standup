@@ -1,4 +1,3 @@
-import PageLayout from '../components/PageLayout';
 import Utils from '../util/Utils';
 
 import '../styles/grid.scss';
@@ -61,18 +60,16 @@ class Grid extends React.Component {
 
         const classname = `grid ${stopping ? 'stopping' : ''}`;
         return (
-            <PageLayout className={classname}>
-                <div className="page_content">
-                    {names.map((n, i) =>
-                        <div className="name-wrapper" key={n.value} style={style}>
-                            <div className="name" data-highlight={i === highlight} data-winner={i === highlight && !!winner}>{n.value}</div>
-                        </div>
-                    )}
-                    <div className="stop-btn-wrapper">
-                        <div class="stop-btn" onClick={this.stop}>{stopText}</div>
+            <div className={classname}>
+                {names.map((n, i) =>
+                    <div className="name-wrapper" key={n.value} style={style}>
+                        <div className="name" data-highlight={i === highlight} data-winner={i === highlight && !!winner}>{n.value}</div>
                     </div>
+                )}
+                <div className="stop-btn-wrapper">
+                    <div class="stop-btn" onClick={this.stop}>{stopText}</div>
                 </div>
-            </PageLayout>
+            </div>
         );
     }
 }
