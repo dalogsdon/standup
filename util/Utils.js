@@ -18,7 +18,6 @@ const engineers = shuffle([
     { value: 'Chris' },
     { value: 'Drew', spoken: 'Drew, my humble creator,' },
     { value: 'Dom' },
-    { value: 'Gaurav', spoken: 'G' },
     { value: 'Gregory' },
     { value: 'Jesse', spoken: 'Lorenzo' },
     { value: 'Jingjing' },
@@ -27,7 +26,6 @@ const engineers = shuffle([
     { value: 'Nick' },
     { value: 'Rich' },
     { value: 'Tyler' },
-    { value: 'Xiaojun' },
     { value: 'Ytalo' },
 ]);
 
@@ -35,12 +33,10 @@ const support = shuffle([
     { value: 'Ali' },
     { value: 'Betty' },
     { value: 'Jordan' },
-    { value: 'Joshua' },
     { value: 'Karan' },
     { value: 'Kelsey' },
     { value: 'Mike', spoken: 'Mikey' },
     { value: 'Mohan' },
-    { value: 'Nick' },
 ]);
 
 function uniqueName(name, index, self) {

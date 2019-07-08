@@ -25,8 +25,14 @@ class Grid extends React.Component {
     }
     declareWinner = () => {
         const winner = this.state.names[this.state.highlight];
-        Utils.say((winner.spoken || winner.value) + ' is the winner!');
+        Utils.say(`${winner.spoken || winner.value} is the winner!`);
         this.setState({ winner });
+    };
+    manuallyDeclareWinner = (winner, highlight) => () => {
+        if (this.state.winner) {
+            Utils.say(`Just kidding, ${winner.spoken || winner.value} is actually the winner!`);
+            this.setState({ winner, highlight });
+        }
     };
     pickName = (timeout) => {
         if (timeout > 400) {
@@ -63,11 +69,17 @@ class Grid extends React.Component {
             <div className={classname}>
                 {names.map((n, i) =>
                     <div className="name-wrapper" key={n.value} style={style}>
-                        <div className="name" data-highlight={i === highlight} data-winner={i === highlight && !!winner}>{n.value}</div>
+                        <div
+                            className="name"
+                            data-highlight={i === highlight}
+                            data-winner={i === highlight && !!winner}
+                            onClick={this.manuallyDeclareWinner(n, i)}>
+                            {n.value}
+                        </div>
                     </div>
                 )}
                 <div className="stop-btn-wrapper">
-                    <div class="stop-btn" onClick={this.stop}>{stopText}</div>
+                    <div className="stop-btn" onClick={this.stop}>{stopText}</div>
                 </div>
             </div>
         );
