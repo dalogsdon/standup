@@ -44,17 +44,30 @@
 
             border-radius: 0.5rem;
 
-            &[data-highlight="true"] {
-                background-color: $bg2;
+            // TODO generalize winner styles better, reduce duplication
+            &[data-highlight-1="true"] {
+                background-color: #6a5b0c;
+                color: white;
+            }
+            &[data-highlight-2="true"] {
+                background-color: #616161;
                 color: white;
             }
 
-            &[data-winner="true"] {
-                box-shadow: 0 0 50px 10px #6efb65 inset;
-                text-shadow: 1px 1px 0 #6efb65;
-                color: #6efb65;
+            &[data-winner-1="true"] {
+                box-shadow: 0 0 50px 10px #FFD700 inset;
+                text-shadow: 1px 1px 0 #FFD700;
+                color: #FFD700;
                 font-size: 1.4em;
-                text-shadow: 1px 1px 0 #5dd656, 2px 2px 0 #56c54f, 3px 3px 0 #469e3f, 4px 4px 0 #41923c;
+                text-shadow: 1px 1px 0 #d9c34d, 2px 2px 0 #c2b04e, 3px 3px 0 #9e8e3a, 4px 4px 0 #948539;
+                transition: all 1s ease;
+            }
+            &[data-winner-2="true"] {
+                box-shadow: 0 0 50px 10px #c0c0c0 inset;
+                text-shadow: 1px 1px 0 #c0c0c0;
+                color: #c0c0c0;
+                font-size: 1.4em;
+                text-shadow: 1px 1px 0 #b6b6b6, 2px 2px 0 #ababab, 3px 3px 0 #9a9a9a, 4px 4px 0 #8f8f8f;
                 transition: all 1s ease;
             }
         }

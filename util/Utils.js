@@ -13,13 +13,13 @@ function shuffle(a) {
 
 const engineers = shuffle([
     { value: 'Asim', spoken: 'Ahhsim' },
-    { value: 'Bradley', spoken: 'Bradley, the paywall master' },
+    { value: 'Bradley', spoken: 'Bradley' },
     { value: 'Bryan' },
     { value: 'Chris' },
     { value: 'Drew', spoken: 'Drew, my humble creator,' },
     { value: 'Dom' },
     { value: 'Gregory' },
-    { value: 'Jesse', spoken: 'Lorenzo' },
+    { value: 'Jesse' },
     { value: 'Jingjing' },
     { value: 'Luis' },
     { value: 'Megan' },
@@ -27,7 +27,7 @@ const engineers = shuffle([
     { value: 'Rich' },
     { value: 'Tyler' },
     { value: 'Ytalo' },
-]);
+].map(s => Object.assign(s, { isEngineer: true })));
 
 const support = shuffle([
     { value: 'Ali' },
@@ -37,17 +37,17 @@ const support = shuffle([
     { value: 'Kelsey' },
     { value: 'Mike', spoken: 'Mikey' },
     { value: 'Mohan' },
-]);
+    { value: 'Nitya' },
+].map(s => Object.assign(s, { isEngineer: false })));
 
 function uniqueName(name, index, self) {
     return self.map(n => n.value).indexOf(name.value) === index;
 }
-const allNames = engineers.concat(support).filter(uniqueName);
+const allNames = shuffle(engineers.concat(support).filter(uniqueName));
 
 const Utils = {
     getNames() {
-        const dayOfWeek = new Date().getDay();
-        return dayOfWeek === 2 || dayOfWeek === 4 ? support : allNames;
+        return allNames;
     },
     getRandomName() {
         const dayOfWeek = new Date().getDay();
