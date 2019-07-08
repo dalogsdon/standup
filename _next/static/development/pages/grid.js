@@ -2236,11 +2236,24 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "declareWinner", function () {
       var winner = _this.state.names[_this.state.highlight];
-      _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].say((winner.spoken || winner.value) + ' is the winner!');
+      _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].say("".concat(winner.spoken || winner.value, " is the winner!"));
 
       _this.setState({
         winner: winner
       });
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "manuallyDeclareWinner", function (winner, highlight) {
+      return function () {
+        if (_this.state.winner) {
+          _util_Utils__WEBPACK_IMPORTED_MODULE_8__["default"].say("Just kidding, ".concat(winner.spoken || winner.value, " is actually the winner!"));
+
+          _this.setState({
+            winner: winner,
+            highlight: highlight
+          });
+        }
+      };
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "pickName", function (timeout) {
@@ -2280,6 +2293,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var _this$state = this.state,
           names = _this$state.names,
           highlight = _this$state.highlight,
@@ -2301,7 +2316,7 @@ function (_React$Component) {
         className: classname,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 69
         },
         __self: this
       }, names.map(function (n, i) {
@@ -2311,16 +2326,17 @@ function (_React$Component) {
           style: style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 71
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
           className: "name",
           "data-highlight": i === highlight,
           "data-winner": i === highlight && !!winner,
+          onClick: _this2.manuallyDeclareWinner(n, i),
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 66
+            lineNumber: 72
           },
           __self: this
         }, n.value));
@@ -2328,15 +2344,15 @@ function (_React$Component) {
         className: "stop-btn-wrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 81
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        class: "stop-btn",
+        className: "stop-btn",
         onClick: this.stop,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 82
         },
         __self: this
       }, stopText)));
@@ -2390,9 +2406,6 @@ var engineers = shuffle([{
 }, {
   value: 'Dom'
 }, {
-  value: 'Gaurav',
-  spoken: 'G'
-}, {
   value: 'Gregory'
 }, {
   value: 'Jesse',
@@ -2410,8 +2423,6 @@ var engineers = shuffle([{
 }, {
   value: 'Tyler'
 }, {
-  value: 'Xiaojun'
-}, {
   value: 'Ytalo'
 }]);
 var support = shuffle([{
@@ -2421,8 +2432,6 @@ var support = shuffle([{
 }, {
   value: 'Jordan'
 }, {
-  value: 'Joshua'
-}, {
   value: 'Karan'
 }, {
   value: 'Kelsey'
@@ -2431,8 +2440,6 @@ var support = shuffle([{
   spoken: 'Mikey'
 }, {
   value: 'Mohan'
-}, {
-  value: 'Nick'
 }]);
 
 function uniqueName(name, index, self) {
@@ -2470,7 +2477,7 @@ var Utils = {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!*****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fgrid&absolutePagePath=%2FUsers%2Fdlogsdon%2FGitHub%2Fstandup%2Fpages%2Fgrid.js ***!
   \*****************************************************************************************************************************/
@@ -2493,5 +2500,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=grid.js.map

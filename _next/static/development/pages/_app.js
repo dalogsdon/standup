@@ -11187,9 +11187,6 @@ var engineers = shuffle([{
 }, {
   value: 'Dom'
 }, {
-  value: 'Gaurav',
-  spoken: 'G'
-}, {
   value: 'Gregory'
 }, {
   value: 'Jesse',
@@ -11207,8 +11204,6 @@ var engineers = shuffle([{
 }, {
   value: 'Tyler'
 }, {
-  value: 'Xiaojun'
-}, {
   value: 'Ytalo'
 }]);
 var support = shuffle([{
@@ -11218,8 +11213,6 @@ var support = shuffle([{
 }, {
   value: 'Jordan'
 }, {
-  value: 'Joshua'
-}, {
   value: 'Karan'
 }, {
   value: 'Kelsey'
@@ -11228,8 +11221,6 @@ var support = shuffle([{
   spoken: 'Mikey'
 }, {
   value: 'Mohan'
-}, {
-  value: 'Nick'
 }]);
 
 function uniqueName(name, index, self) {
