@@ -11156,6 +11156,10 @@ function (_App) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+
 // https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 // https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
 function shuffle(a) {
@@ -11176,7 +11180,7 @@ var engineers = shuffle([{
   spoken: 'Ahhsim'
 }, {
   value: 'Bradley',
-  spoken: 'Bradley, the paywall master'
+  spoken: 'Bradley'
 }, {
   value: 'Bryan'
 }, {
@@ -11189,8 +11193,7 @@ var engineers = shuffle([{
 }, {
   value: 'Gregory'
 }, {
-  value: 'Jesse',
-  spoken: 'Lorenzo'
+  value: 'Jesse'
 }, {
   value: 'Jingjing'
 }, {
@@ -11205,7 +11208,11 @@ var engineers = shuffle([{
   value: 'Tyler'
 }, {
   value: 'Ytalo'
-}]);
+}].map(function (s) {
+  return _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()(s, {
+    isEngineer: true
+  });
+}));
 var support = shuffle([{
   value: 'Ali'
 }, {
@@ -11221,7 +11228,13 @@ var support = shuffle([{
   spoken: 'Mikey'
 }, {
   value: 'Mohan'
-}]);
+}, {
+  value: 'Nitya'
+}].map(function (s) {
+  return _babel_runtime_corejs2_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default()(s, {
+    isEngineer: false
+  });
+}));
 
 function uniqueName(name, index, self) {
   return self.map(function (n) {
@@ -11229,11 +11242,10 @@ function uniqueName(name, index, self) {
   }).indexOf(name.value) === index;
 }
 
-var allNames = engineers.concat(support).filter(uniqueName);
+var allNames = shuffle(engineers.concat(support).filter(uniqueName));
 var Utils = {
   getNames: function getNames() {
-    var dayOfWeek = new Date().getDay();
-    return dayOfWeek === 2 || dayOfWeek === 4 ? support : allNames;
+    return allNames;
   },
   getRandomName: function getRandomName() {
     var dayOfWeek = new Date().getDay();
