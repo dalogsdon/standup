@@ -13,7 +13,7 @@ function shuffle(a) {
 
 const engineers = shuffle([
     { value: 'Asim', spoken: 'Ahhsim' },
-    { value: 'Bradley', spoken: 'Bradley' },
+    { value: 'Bradley' },
     { value: 'Bryan' },
     { value: 'Chris' },
     { value: 'Drew', spoken: 'Drew, my humble creator,' },
@@ -22,9 +22,12 @@ const engineers = shuffle([
     { value: 'Jesse' },
     { value: 'Jingjing' },
     { value: 'Luis' },
+    { value: 'Matt' },
     { value: 'Megan' },
     { value: 'Nick' },
+    { value: 'Paresh' },
     { value: 'Rich' },
+    { value: 'Russell' },
     { value: 'Tyler' },
     { value: 'Ytalo' },
 ].map(s => Object.assign(s, { isEngineer: true })));
@@ -32,7 +35,6 @@ const engineers = shuffle([
 const support = shuffle([
     { value: 'Ali' },
     { value: 'Betty' },
-    { value: 'Jordan' },
     { value: 'Karan' },
     { value: 'Kelsey' },
     { value: 'Mike', spoken: 'Mikey' },
